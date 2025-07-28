@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script defer src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+
+</head>
+<body>
+  <header class="header">
+    <div class="logo">MyPortfolio</div>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="theme-toggle" id="themeToggle">🌓</div>
+  </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Abhishek Pandey</h1>
+      <p class="title">Junior Security Analyst</p>
+      <p class="tagline">Building secure systems with curiosity & consistency</p>
+    </div>
+    <div class="hero-image">
+      <img src="images/portrait.jpg" alt="Portrait" loading="lazy" />
+    </div>
+    <div class="particles-bg"></div>
+  </section>
+  <section id="about" class="about section fade-in">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>I’m a cybersecurity enthusiast skilled in SIEM, digital forensics, and threat analysis. I’m passionate about securing systems and learning modern defensive techniques.</p>
+    </div>
+    <div class="about-bg">
+      <img src="images/workspace.jpg" alt="Workspace" />
+    </div>
+  </section>
+  <section id="projects" class="projects section fade-in">
+    <h2>Projects</h2>
+    <div class="project-filters">
+      <button data-filter="all">All</button>
+      <button data-filter="web">Web</button>
+      <button data-filter="security">Security</button>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card" data-category="security">
+        <img src="images/showcase.jpg" alt="Showcase Project">
+        <h3>SIEM Log Analysis Tool</h3>
+        <p>Analyzed logs using ELK Stack for threat hunting.</p>
+        <span>Stack: ELK, Bash</span>
+      </div>
+    </div>
+  </section>
+  <section id="experience" class="experience section fade-in">
+    <h2>Experience</h2>
+    <div class="experience-cards">
+      <div class="exp-card">
+        <img src="images/logo-placeholder.png" alt="Company Logo" />
+        <div>
+          <h3>Cybersecurity Intern</h3>
+          <p>MrWebSecure Info Solutions Pvt Ltd</p>
+          <span>Jan 2025 - Mar 2025</span>
+          <p>Worked on log analysis, red/blue team simulations, and incident response.</p>
+          <small>Tools: ELK, Brutus, HawkEye Lab</small>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="awards" class="awards section fade-in">
+    <h2>Awards & Achievements</h2>
+    <div class="award-timeline">
+      <div class="award-card">
+        <h3>Cybersecurity CTF Winner</h3>
+        <p>Won college-level CTF competition, solving forensic and web exploits.</p>
+        <span class="counter">1</span>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact section fade-in">
+    <h2>Contact Me</h2>
+    <form class="contact-form" novalidate>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <footer class="footer">
+    <div>© 2025 Abhishek Pandey</div>
+    <div class="socials">
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+</body>
+</html>
+
