@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { motion, useAnimation, useScroll } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Head from "next/head";
@@ -120,25 +121,66 @@ export default function Home() {
 
       <main className="max-w-6xl mx-auto p-6">
         {/* Hero */}
-        <section className="grid md:grid-cols-2 gap-12 items-center py-20">
-          <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
-            <h2 className="text-5xl font-extrabold leading-tight bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
-              Learning every day.<br /> Defending with passion.<br /> Growing into cybersecurity.
-            </h2>
-            <p className="mt-6 text-gray-400 max-w-md">I’m an aspiring cybersecurity professional focused on SOC operations, digital forensics, and incident response. My goal: to learn quickly, contribute to security teams, and build resilience against threats.</p>
-            <div className="mt-8 flex gap-4">
-              <a href="mailto:abhi.pandey0219@gmail.com" className="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 rounded-lg text-white text-sm shadow-lg">Email Me</a>
-              <a href="https://www.linkedin.com/in/abhishek-pandey-7a2b931a3/" target="_blank" rel="noreferrer" className="px-5 py-2 border border-gray-700 hover:border-emerald-400 rounded-lg text-sm">LinkedIn</a>
-              <a href="/resume.pdf" className="px-5 py-2 border border-gray-700 hover:border-emerald-400 rounded-lg text-sm">Resume</a>
-            </div>
-          </motion.div>
+<section className="flex flex-col items-center justify-center text-center min-h-screen">
+  <motion.div
+    initial={{ opacity: 0, y: -40 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+  >
+    <h2 className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
+      Learning every day. Defending with passion. Growing into cybersecurity.
+    </h2>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="flex justify-center">
-            <div className="w-64 h-64 rounded-full bg-gradient-to-tr from-emerald-500 to-cyan-500 flex items-center justify-center shadow-xl">
-              <img src="/profile.jpg" alt="Profile" className="w-40 h-40 rounded-full border-4 border-gray-900" />
-            </div>
-          </motion.div>
-        </section>
+    <p className="mt-6 text-gray-400 max-w-2xl mx-auto">
+      I’m an aspiring cybersecurity professional focused on SOC operations, digital forensics, and incident response. 
+      My goal: to learn quickly, contribute to security teams, and build resilience against threats.
+    </p>
+
+    {/* Animated Buttons */}
+    <motion.div
+      className="mt-8 flex gap-4 justify-center"
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { staggerChildren: 0.2, duration: 0.6 },
+        },
+      }}
+    >
+      {[
+        {
+          label: "Email Me",
+          href: "mailto:abhi.pandey0219@gmail.com",
+          className: "px-5 py-2 bg-emerald-600 hover:bg-emerald-700 rounded-lg text-white text-sm shadow-lg",
+        },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/abhishek-pandey-7a2b931a3/",
+          className: "px-5 py-2 border border-gray-700 hover:border-emerald-400 rounded-lg text-sm",
+        },
+        {
+          label: "Resume",
+          href: "/resume.pdf",
+          className: "px-5 py-2 border border-gray-700 hover:border-emerald-400 rounded-lg text-sm",
+        },
+      ].map((btn, i) => (
+        <motion.a
+          key={i}
+          href={btn.href}
+          target={btn.href.startsWith("http") ? "_blank" : "_self"}
+          rel="noreferrer"
+          className={btn.className}
+          variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+        >
+          {btn.label}
+        </motion.a>
+      ))}
+    </motion.div>
+  </motion.div>
+</section>
 
         {/* About */}
         <FadeInSection>
@@ -151,7 +193,7 @@ export default function Home() {
         {/* Skills */}
         <FadeInSection>
           <section id="skills" className="mt-16">
-            <h3 className="text-2xl font-semibold mb-8">Technical Skills</h3>
+            <h3 className="text-2xl font-semibold text-center mb-10">Technical Skills</h3>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {skills.map((skill) => (
                 <div
@@ -207,7 +249,7 @@ export default function Home() {
         {/* Projects */}
         <FadeInSection>
           <section id="projects" className="mt-16">
-            <h3 className="text-2xl font-semibold">Projects & Labs</h3>
+            <h3 className="text-2xl font-semibold text-center mb-10">Projects & Labs</h3>
             <div className="mt-6 grid md:grid-cols-2 gap-6">
               {projects.map((p) => (
                 <a key={p.title} href={p.link} target="_blank" rel="noreferrer" className="block p-6 bg-gray-800/50 backdrop-blur-sm rounded-xl hover:shadow-lg hover:border-emerald-500 border border-transparent transition">
@@ -252,7 +294,7 @@ export default function Home() {
           </section>
         </FadeInSection>
 
-        <footer className="mt-16 text-center text-xs text-gray-500">© {new Date().getFullYear()} Abhishek Pandey — Built with Next.js & Tailwind</footer>
+        <footer className="mt-16 text-center text-xs text-gray-500">© {new Date().getFullYear()} Abhishek Pandey </footer>
       </main>
 
       {/* Back to Top Button */}
