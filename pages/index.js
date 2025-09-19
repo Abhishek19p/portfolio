@@ -70,27 +70,27 @@ export default function Home() {
   ];
 
   const skills = [
-    { name: "Penetration Testing", icon: <Shield className="w-10 h-10 text-purple-500 mb-4" />, category: "Security" },
-    { name: "Vulnerability Assessment", icon: <Search className="w-10 h-10 text-purple-500 mb-4" />, category: "Security" },
-    { name: "Network Security", icon: <Network className="w-10 h-10 text-purple-500 mb-4" />, category: "Networking" },
-    { name: "Ethical Hacking", icon: <Terminal className="w-10 h-10 text-purple-500 mb-4" />, category: "Security" },
-    { name: "Security Analysis", icon: <Eye className="w-10 h-10 text-purple-500 mb-4" />, category: "Analysis" },
-    { name: "Incident Response", icon: <Lock className="w-10 h-10 text-purple-500 mb-4" />, category: "Security" },
-    { name: "Python Scripting", icon: <Code className="w-10 h-10 text-purple-500 mb-4" />, category: "Programming" },
-    { name: "Linux Administration", icon: <Server className="w-10 h-10 text-purple-500 mb-4" />, category: "Systems" },
+    { name: "Penetration Testing", icon: <Shield className="w-10 h-10 text-mint-400 mb-4" />, category: "Security" },
+    { name: "Vulnerability Assessment", icon: <Search className="w-10 h-10 text-mint-400 mb-4" />, category: "Security" },
+    { name: "Network Security", icon: <Network className="w-10 h-10 text-mint-400 mb-4" />, category: "Networking" },
+    { name: "Ethical Hacking", icon: <Terminal className="w-10 h-10 text-mint-400 mb-4" />, category: "Security" },
+    { name: "Security Analysis", icon: <Eye className="w-10 h-10 text-mint-400 mb-4" />, category: "Analysis" },
+    { name: "Incident Response", icon: <Lock className="w-10 h-10 text-mint-400 mb-4" />, category: "Security" },
+    { name: "Python Scripting", icon: <Code className="w-10 h-10 text-mint-400 mb-4" />, category: "Programming" },
+    { name: "Linux Administration", icon: <Server className="w-10 h-10 text-mint-400 mb-4" />, category: "Systems" },
   ];
 
   const tools = [
-    { name: "Wireshark", icon: <Activity className="w-10 h-10 text-purple-500 mb-4" />, desc: "Used Wireshark for packet capture analysis and network troubleshooting" },
-    { name: "Nmap", icon: <Search className="w-10 h-10 text-purple-500 mb-4" />, desc: "Performed network discovery and security auditing with Nmap scanning" },
-    { name: "Burp Suite", icon: <Bug className="w-10 h-10 text-purple-500 mb-4" />, desc: "Conducted web application security testing using Burp Suite proxy" },
-    { name: "Splunk", icon: <Database className="w-10 h-10 text-purple-500 mb-4" />, desc: "Analyzed security logs and created dashboards for threat detection" },
-    { name: "Metasploit", icon: <Target className="w-10 h-10 text-purple-500 mb-4" />, desc: "Executed penetration testing and vulnerability exploitation frameworks" },
-    { name: "Autopsy", icon: <FileSearch className="w-10 h-10 text-purple-500 mb-4" />, desc: "Performed digital forensics, evidence recovery, and timeline analysis using Autopsy" },
+    { name: "Wireshark", icon: <Activity className="w-10 h-10 text-mint-400 mb-4" />, desc: "Used Wireshark for packet capture analysis and network troubleshooting" },
+    { name: "Nmap", icon: <Search className="w-10 h-10 text-mint-400 mb-4" />, desc: "Performed network discovery and security auditing with Nmap scanning" },
+    { name: "Burp Suite", icon: <Bug className="w-10 h-10 text-mint-400 mb-4" />, desc: "Conducted web application security testing using Burp Suite proxy" },
+    { name: "Splunk", icon: <Database className="w-10 h-10 text-mint-400 mb-4" />, desc: "Analyzed security logs and created dashboards for threat detection" },
+    { name: "Metasploit", icon: <Target className="w-10 h-10 text-mint-400 mb-4" />, desc: "Executed penetration testing and vulnerability exploitation frameworks" },
+    { name: "Autopsy", icon: <FileSearch className="w-10 h-10 text-mint-400 mb-4" />, desc: "Performed digital forensics, evidence recovery, and timeline analysis using Autopsy" },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-gray-100 scroll-smooth">
+    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-gray-100 scroll-smooth">
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
@@ -99,7 +99,7 @@ export default function Home() {
 
       {/* Scroll progress bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 to-pink-500 origin-left z-50"
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 to-cyan-500 origin-left z-50"
         style={{ scaleX: scrollYProgress }}
       />
 
@@ -109,12 +109,12 @@ export default function Home() {
           <p className="text-sm text-gray-400">Cybersecurity Analyst | Digital Forensics & SOC</p>
         </div>
         <nav className="hidden md:flex space-x-6 text-sm text-gray-300">
-          <a href="#about" className="hover:text-indigo-400">About</a>
-          <a href="#skills" className="hover:text-indigo-400">Skills</a>
-          <a href="#tools" className="hover:text-indigo-400">Tools</a>
-          <a href="#experience" className="hover:text-indigo-400">Experience</a>
-          <a href="#projects" className="hover:text-indigo-400">Projects</a>
-          <a href="#contact" className="hover:text-indigo-400">Contact</a>
+          <a href="#about" className="hover:text-emerald-400">About</a>
+          <a href="#skills" className="hover:text-emerald-400">Skills</a>
+          <a href="#tools" className="hover:text-emerald-400">Tools</a>
+          <a href="#experience" className="hover:text-emerald-400">Experience</a>
+          <a href="#projects" className="hover:text-emerald-400">Projects</a>
+          <a href="#contact" className="hover:text-emerald-400">Contact</a>
         </nav>
       </header>
 
@@ -122,19 +122,19 @@ export default function Home() {
         {/* Hero */}
         <section className="grid md:grid-cols-2 gap-12 items-center py-20">
           <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
-            <h4 className="text-5xl font-extrabold leading-tight bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
-              Securing systems Investigating breaches Building resilience.
-            </h4>
-            <p className="mt-6 text-gray-400 max-w-md">I’m a cybersecurity analyst focused on SOC operations, digital forensics, and incident response. My mission: protect systems, uncover evidence, and empower teams to defend against threats.</p>
+            <h2 className="text-5xl font-extrabold leading-tight bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
+              Learning every day.<br /> Defending with passion.<br /> Growing into cybersecurity.
+            </h2>
+            <p className="mt-6 text-gray-400 max-w-md">I’m an aspiring cybersecurity professional focused on SOC operations, digital forensics, and incident response. My goal: to learn quickly, contribute to security teams, and build resilience against threats.</p>
             <div className="mt-8 flex gap-4">
-              <a href="mailto:abhi.pandey0219@gmail.com" className="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-white text-sm shadow-lg">Email Me</a>
-              <a href="https://www.linkedin.com/in/abhishek-pandey-7a2b931a3/" target="_blank" rel="noreferrer" className="px-5 py-2 border border-gray-700 hover:border-indigo-400 rounded-lg text-sm">LinkedIn</a>
-              <a href="/resume.pdf" className="px-5 py-2 border border-gray-700 hover:border-indigo-400 rounded-lg text-sm">Resume</a>
+              <a href="mailto:abhi.pandey0219@gmail.com" className="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 rounded-lg text-white text-sm shadow-lg">Email Me</a>
+              <a href="https://www.linkedin.com/in/abhishek-pandey-7a2b931a3/" target="_blank" rel="noreferrer" className="px-5 py-2 border border-gray-700 hover:border-emerald-400 rounded-lg text-sm">LinkedIn</a>
+              <a href="/resume.pdf" className="px-5 py-2 border border-gray-700 hover:border-emerald-400 rounded-lg text-sm">Resume</a>
             </div>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="flex justify-center">
-            <div className="w-64 h-64 rounded-full bg-gradient-to-tr from-indigo-500 to-pink-500 flex items-center justify-center shadow-xl">
+            <div className="w-64 h-64 rounded-full bg-gradient-to-tr from-emerald-500 to-cyan-500 flex items-center justify-center shadow-xl">
               <img src="/profile.jpg" alt="Profile" className="w-40 h-40 rounded-full border-4 border-gray-900" />
             </div>
           </motion.div>
@@ -144,7 +144,7 @@ export default function Home() {
         <FadeInSection>
           <section id="about" className="mt-16 bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl">
             <h3 className="text-2xl font-semibold">About Me</h3>
-            <p className="mt-4 text-gray-300">Skilled Cybersecurity professional with hands-on experience in SOC operations, incident response, and digital forensics. Skilled in monitoring logs, investigating anomalies, and applying security tools such as Splunk, Wireshark, Nmap, and Burp Suite. Familiar with VAPT and OWASP Top 10, with knowledge of frameworks including NIST, MITRE ATT&CK, and ISO 27001. Strong analytical skills with the ability to secure systems and support investigations.</p>
+            <p className="mt-4 text-gray-300">I specialize in digital forensics, SOC monitoring, and incident response. From analyzing anomalies in Splunk logs to preserving evidence from compromised systems, I combine investigative skills with hands-on technical expertise. My focus is on actionable reporting, guided by frameworks like NIST and MITRE ATT&CK.</p>
           </section>
         </FadeInSection>
 
@@ -156,7 +156,7 @@ export default function Home() {
               {skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex flex-col items-center justify-center p-6 bg-gray-900 rounded-xl border border-gray-800 hover:border-purple-500 hover:shadow-lg transition"
+                  className="flex flex-col items-center justify-center p-6 bg-gray-900 rounded-xl border border-gray-800 hover:border-emerald-500 hover:shadow-lg transition"
                 >
                   {skill.icon}
                   <h4 className="font-semibold text-white text-center">{skill.name}</h4>
@@ -177,7 +177,7 @@ export default function Home() {
               {tools.map((tool) => (
                 <div
                   key={tool.name}
-                  className="flex flex-col items-center text-center p-6 bg-gray-900 rounded-xl border border-gray-800 hover:border-purple-500 hover:shadow-lg transition"
+                  className="flex flex-col items-center text-center p-6 bg-gray-900 rounded-xl border border-gray-800 hover:border-emerald-500 hover:shadow-lg transition"
                 >
                   {tool.icon}
                   <h4 className="font-semibold text-white">{tool.name}</h4>
@@ -210,11 +210,11 @@ export default function Home() {
             <h3 className="text-2xl font-semibold">Projects & Labs</h3>
             <div className="mt-6 grid md:grid-cols-2 gap-6">
               {projects.map((p) => (
-                <a key={p.title} href={p.link} target="_blank" rel="noreferrer" className="block p-6 bg-gray-800/50 backdrop-blur-sm rounded-xl hover:shadow-lg hover:border-indigo-500 border border-transparent transition">
+                <a key={p.title} href={p.link} target="_blank" rel="noreferrer" className="block p-6 bg-gray-800/50 backdrop-blur-sm rounded-xl hover:shadow-lg hover:border-emerald-500 border border-transparent transition">
                   <h4 className="font-semibold text-lg">{p.title}</h4>
                   <p className="mt-2 text-sm text-gray-400">{p.desc}</p>
                   <div className="mt-3 flex gap-2 flex-wrap">
-                    {p.tags.map((t) => <span key={t} className="text-xs bg-indigo-600/30 px-2 py-1 rounded-md text-indigo-300">{t}</span>)}
+                    {p.tags.map((t) => <span key={t} className="text-xs bg-emerald-600/30 px-2 py-1 rounded-md text-emerald-300">{t}</span>)}
                   </div>
                 </a>
               ))}
@@ -242,7 +242,7 @@ export default function Home() {
 
         {/* Contact */}
         <FadeInSection>
-          <section id="contact" className="mt-16 bg-gradient-to-r from-indigo-600 to-pink-500 p-8 rounded-2xl text-center">
+          <section id="contact" className="mt-16 bg-gradient-to-r from-emerald-600 to-cyan-500 p-8 rounded-2xl text-center">
             <h3 className="text-2xl font-bold">Let’s secure the future together</h3>
             <p className="mt-3 text-gray-100">I’m open to SOC, incident response, and forensics roles. Reach out for collaborations or interviews.</p>
             <div className="mt-6 flex justify-center gap-4">
@@ -252,15 +252,12 @@ export default function Home() {
           </section>
         </FadeInSection>
 
-        <footer className="mt-16 text-center text-xs text-gray-500">© {new Date().getFullYear()} Abhishek Pandey</footer>
+        <footer className="mt-16 text-center text-xs text-gray-500">© {new Date().getFullYear()} Abhishek Pandey — Built with Next.js & Tailwind</footer>
       </main>
 
       {/* Back to Top Button */}
       {showTopBtn && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 p-3 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg transition z-50"
-          aria-label="Back to Top"
+        <button       
         >
           ↑
         </button>
