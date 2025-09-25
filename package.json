@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.8",
     "@vercel/speed-insights": "^1.2.0",
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.544.0",
