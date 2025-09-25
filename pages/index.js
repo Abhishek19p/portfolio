@@ -64,7 +64,7 @@ export default function Home() {
       status: "Ongoing",
     },
     {
-      title: "Web App VAPT",
+      title: "Bug Bounty Program",
       desc: "Tested applications against OWASP Top 10 using Burp Suite, manual exploitation, and vulnerability validation.",
       tags: ["OWASP", "Pentesting", "Burpsuite"],
       link: "https://hackerone.com/",
@@ -123,66 +123,77 @@ export default function Home() {
 
       <main className="max-w-6xl mx-auto p-6">
         {/* Hero */}
-        <section className="flex flex-col items-center justify-center text-center min-h-screen">
-          <motion.div initial={{ opacity: 0, y: -40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-           <h6 className="text-5xl md:text-6xl font-extrabold leading-tight mb-8">
+<section className="flex flex-col items-center justify-center text-center py-10 md:py-16">
+
+  <motion.div
+    initial={{ opacity: 0, y: -40 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+  >
+    <h10 className="text-5xl md:text-6xl font-extrabold leading-tight mb-8">
       <span className="text-purple-500">Learning every day.</span><br />
       <span className="text-purple-500">Defending with passion.</span><br />
       <span className="text-purple-500">Growing into cybersecurity.</span>
-    </h6>
-{/* Subtitle */}
-            <p className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+    </h10>
+
+    {/* Subtitle */}
+    <p className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
       I’m an aspiring cybersecurity professional focused on SOC operations, digital forensics, and incident response.  
       My goal to learn quickly, contribute to security teams, and build resilience against threats.
     </p>
 
-            {/* Animated Buttons */}
-            <motion.div
-              className="mt-12 flex gap-6 justify-center"
-              initial="hidden"
-              animate="visible"
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2, duration: 0.6 } },
-              }}
-            >
-              {[
-                {
-                  label: "Email Me",
-                  href: "mailto:abhi.pandey0219@gmail.com",
-                  className: "px-6 py-3 border border-gray-700 hover:border-fuchsia-400 rounded-lg text-sm",
-                },
-                {
-                  label: "LinkedIn",
-                  href: "https://www.linkedin.com/in/abhishek-pandey-7a2b931a3/",
-                  className: "px-6 py-3 border border-gray-700 hover:border-fuchsia-400 rounded-lg text-sm",
-                },
-                {
-                  label: "Resume",
-                  href: "/resume.pdf",
-                  className: "px-6 py-3 border border-gray-700 hover:border-fuchsia-400 rounded-lg text-sm",
-                },
-              ].map((btn, i) => (
-                <motion.a
-                  key={i}
-                  href={btn.href}
-                  target={btn.href.startsWith("http") ? "_blank" : "_self"}
-                  rel="noreferrer"
-                  className={btn.className}
-                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-                >
-                  {btn.label}
-                </motion.a>
-              ))}
-            </motion.div>
-          </motion.div>
-        </section>
+    {/* Animated Buttons */}
+    <motion.div
+      className="mt-12 flex gap-6 justify-center"
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2, duration: 0.6 } },
+      }}
+    >
+      {[
+        {
+          label: "Email Me",
+          href: "mailto:abhi.pandey0219@gmail.com",
+          className: "px-6 py-3 border border-gray-700 hover:border-fuchsia-400 rounded-lg text-sm",
+        },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/abhishek-pandey-7a2b931a3/",
+          className: "px-6 py-3 border border-gray-700 hover:border-fuchsia-400 rounded-lg text-sm",
+        },
+        {
+          label: "Resume",
+          href: "/resume.pdf",
+          className: "px-6 py-3 border border-gray-700 hover:border-fuchsia-400 rounded-lg text-sm",
+        },
+      ].map((btn, i) => (
+  <motion.a
+    key={i}
+    href={btn.href}
+    target={btn.href.startsWith("http") ? "_blank" : "_self"}
+    rel="noreferrer"
+    className={btn.className}
+    variants={{
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0 },
+    }}
+  >
+    {btn.label}
+  </motion.a>
+))}
+     
+    </motion.div>
+  </motion.div>
+</section>
+
 
         {/* About */}
         <FadeInSection>
-          <section id="about" className="mt-16 bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl">
-            <h3 className="text-2xl font-semibold">About Me</h3>
-            <p className="mt-4 text-gray-300">
+         <section id="about" className="mt-10 bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl">
+    <h3 className="text-2xl font-semibold">About Me</h3>
+    <p className="mt-4 text-gray-300">
               Skilled Cybersecurity professional with hands-on experience in SOC operations, incident response, and 
               digital forensics. Skilled in monitoring logs, investigating anomalies, and applying security tools such as 
               Splunk, Wireshark, Nmap, and Burp Suite. Familiar with VAPT and OWASP Top 10, with knowledge of 
@@ -251,35 +262,44 @@ export default function Home() {
         </FadeInSection>
 
         {/* Projects */}
-        <FadeInSection>
-          <section id="projects" className="mt-16">
-            <h3 className="text-2xl font-semibold text-center mb-10">Projects & Labs</h3>
-            <div className="mt-6 grid md:grid-cols-2 gap-6">
-              {projects.map((p) => (
-                <a
-                  key={p.title}
-                  href={p.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block p-6 bg-gray-800/50 backdrop-blur-sm rounded-xl hover:shadow-lg hover:border-fuchsia-500 border border-transparent transition"
-                >
-                  <h4 className="font-semibold text-lg">{p.title}</h4>
-                  <p className="mt-2 text-sm text-gray-400">{p.desc}</p>
-                  <div className="mt-3 flex gap-2 flex-wrap">
-                    {p.tags.map((t) => (
-                      <span
-                        key={t}
-                        className="text-xs bg-fuchsia-600/30 px-2 py-1 rounded-md text-fuchsia-300"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </a>
-              ))}
-            </div>
-          </section>
-        </FadeInSection>
+        {/* Projects */}
+<FadeInSection>
+  <section id="projects" className="mt-10">
+    <h3 className="text-2xl font-semibold text-center mb-10">Projects & Labs</h3>
+    <div className="mt-6 grid md:grid-cols-2 gap-6">
+      {projects.map((p) => (
+        <a
+          key={p.title}
+          href={p.link}
+          target="_blank"
+          rel="noreferrer"
+          className="block p-6 bg-gray-800/50 backdrop-blur-sm rounded-xl hover:shadow-lg hover:border-fuchsia-500 border border-transparent transition"
+        >
+          <div className="flex items-center justify-between">
+            <h4 className="font-semibold text-lg">{p.title}</h4>
+            {p.status && (
+              <span className="text-xs px-2 py-1 rounded-full bg-fuchsia-600/30 text-fuchsia-300">
+                {p.status}
+              </span>
+            )}
+          </div>
+          <p className="mt-2 text-sm text-gray-400">{p.desc}</p>
+          <div className="mt-3 flex gap-2 flex-wrap">
+            {p.tags.map((t) => (
+              <span
+                key={t}
+                className="text-xs bg-fuchsia-600/30 px-2 py-1 rounded-md text-fuchsia-300"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</FadeInSection>
+
 
         {/* Education & Certifications */}
         <FadeInSection>
